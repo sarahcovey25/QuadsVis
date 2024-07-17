@@ -8,8 +8,6 @@ class Qap {
 	add(point) {
 		if (point >= Math.pow(2, this.dim))
 			throw new RangeError(`Point too large for dimension ${this.dim}`);
-		if (this.excludesCount(point))
-			throw new RangeError("Point excluded");
 		// If we already have the point, just silently return
 		// If we try to create excludes with a point we already have, we'll mess up our cap
 		if (this.points.has(point))

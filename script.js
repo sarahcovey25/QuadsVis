@@ -237,9 +237,6 @@ function drawAffSpace() {
     let dCards = cards.enter().append("g")
     .classed("card", true)
     .on('click', function(d) {
-        if (qap.excludesCount(d.card)) {
-            return;
-        }
         if (qap.contains(d.card))
         qap.remove(d.card);
         else
